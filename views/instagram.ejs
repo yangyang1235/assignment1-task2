@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body, html{
+            background: linear-gradient(red, purple);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            overflow-y: scroll;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card{
+            border-radius: 8px;
+            box-shadow: 0 0 5px 3px rgb(126, 119, 119);
+            background-color: honeydew;
+            flex:0 32%;
+            padding: 2px;
+            margin-bottom: 2%;
+
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: safe;
+            padding: 20px;
+        }
+        
+        .container::before, .container::after{
+            content: '';
+            flex-basis: 100%;
+            width: 0;
+            order: 2;
+        }
+        .card:nth-child(3n+1){
+            order: 1;
+        }
+        .card:nth-child(3n+2){
+            order: 2;
+        }
+        .card:nth-child(3n){
+            order: 3;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+            border-radius: 7px;
+        }
+        .card:first{
+            font-weight: bold;
+            font-size: 1.4em;
+            margin: 5px;
+        }
+        .card .descr{
+            color: lightslategrey;
+            margin: 5px;
+        }
+        .comments{
+            list-style: none;
+
+        }
+        .comments li{
+            color:rgb(61, 58, 58);
+            font-size: smaller;
+        }
+        name{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <a href="instagram/upload"><button>Upload Picture</button></a>
+    <div class='container'>
+        <% for(let i=0;i < pics.length; i++) { %>
+            <div class='card'>
+                <p><%= pics[i].name %></p>
+                <p class='descr'><%= pics[i].description %> </p>
+                <img src="../<%= pics[i].photo %>">
+                <ul class='comments'>
+                    
+                </ul>
+            </div>
+        <% } %>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car at the end of my first year in tech ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-107-1555560637.jpg">
+            <ul class='comments'>
+                <li><name>Maxwel James</name> - OMg that's so cool </li>
+                <li><name>Hannah Monroe</name> - Do you have a girlfriend jk ;] </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car When I first earned a salary ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-104-1555560624.jpg">
+            <ul class='comments'>
+                <li><name>John Doe</name> - Wow Im so proud of you </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car at the end of my first year in tech ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-107-1555560637.jpg">
+            <ul class='comments'>
+                <li><name>Maxwel James</name> - OMg that's so cool </li>
+                <li><name>Hannah Monroe</name> - Do you have a girlfriend jk ;] </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car When I first earned a salary ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-104-1555560624.jpg">
+            <ul class='comments'>
+                <li><name>John Doe</name> - Wow Im so proud of you </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car at the end of my first year in tech ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-107-1555560637.jpg">
+            <ul class='comments'>
+                <li><name>Maxwel James</name> - OMg that's so cool </li>
+                <li><name>Hannah Monroe</name> - Do you have a girlfriend jk ;] </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car When I first earned a salary ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-104-1555560624.jpg">
+            <ul class='comments'>
+                <li><name>John Doe</name> - Wow Im so proud of you </li>
+            </ul>
+        </div>
+        <div class='card'>
+            <p>Random User</p>
+            <p class='descr'>My car at the end of my first year in tech ;p</p>
+            <img src="img/2020-mercedes-amg-a35-sedan-showfloor-107-1555560637.jpg">
+            <ul class='comments'>
+                <li><name>Maxwel James</name> - OMg that's so cool </li>
+                <li><name>Hannah Monroe</name> - Do you have a girlfriend jk ;] </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

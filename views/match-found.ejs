@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match with <%= match %></title>
+    <style>
+         body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: azure;
+          color: aliceblue;  
+         }
+         p{
+             text-align: center;
+         }
+        .container{
+            width: 300px;
+            margin-top: 100px;
+            background: linear-gradient(red, orange);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            box-shadow: 0px 0px 4px 2px rgba(30, 1, 1, .3);
+            border-radius: 10px;
+            padding:20px;
+            display: flex;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .img-holder{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #0ed;">Its a Match!!</h1>
+    <div class="container">
+        <div>
+            <center><h3>Your Profile</h3></center>
+            <div class='img-holder'>
+                <img src="../img/2020-mercedes-amg-a35-sedan-showfloor-102-1555560622.jpg"/>
+            </div>
+            <p>Name - John Doe</p>
+            <p>Age - 21</p>
+            <p>Loves - Skating, Coding, Dancing</p>
+        </div>
+        <div>
+            <center><h3><%= match %>'s Profile</h3></center>
+            <div class='img-holder'>
+                <img src="../img/2020-mercedes-amg-a35-sedan-showfloor-102-1555560622.jpg"/>
+            </div>
+            <p>Name -<%= match %></p>
+            <p>Age - 38</p>
+            <p>Loves - Hacking, Coding, Singing</p>
+            </div>
+    </div>
+</body>
+</html>
